@@ -12,4 +12,9 @@ RUN mv $JBOSS_HOME/domain/configuration/host_xml_history/current $JBOSS_HOME/dom
 
 EXPOSE 9999 9990 8080
 
-CMD ["/opt/jboss/bin/domain.sh", "-b", "0.0.0.0" ,"-bmanagement", "0.0.0.0"]
+COPY start-application /usr/local/bin
+
+ENV MASTER_NAME master
+ENV MASTER_PASSWORD Master@01
+
+CMD ["start-application"]

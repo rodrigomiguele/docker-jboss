@@ -10,6 +10,6 @@ batch
 /host=master/server-config=server-one:remove()
 /host=master/server-config=server-two:remove()
 /host=master/server-config=server-three:remove()
-/host=master:write-attribute(name=name, value="masterOne")
+/host=master:write-attribute(name=name, value="MASTER_NAME")
 
 run-batch
