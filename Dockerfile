@@ -6,8 +6,6 @@ ADD customization $JBOSS_HOME/customization/
 
 RUN $JBOSS_HOME/customization/execute.sh
 
-RUN $JBOSS_HOME/bin/add-user.sh -u hostOne -p password_1 -r ManagementRealm
-
 RUN mv $JBOSS_HOME/domain/configuration/host_xml_history/current $JBOSS_HOME/domain/configuration/domain_xml_history/20160311-020413551
 
 EXPOSE 9999 9990 8080
