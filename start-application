@@ -1,7 +1,7 @@
 #!/bin/bash
 
-$JBOSS_HOME/bin/add-user.sh -u $MASTER_NAME -p $MASTER_PASSWORD -r ManagementRealm
+$JBOSS_HOME/bin/add-user.sh -u $MASTER_USERNAME -p $MASTER_PASSWORD -r ManagementRealm
 
-sed -i 's@MASTER_NAME@'"$MASTER_NAME"'@g' $JBOSS_HOME/domain/configuration/host.xml
+sed -i 's@MASTER_HOST_NAME@'"$MASTER_HOST_NAME"'@g' $JBOSS_HOME/domain/configuration/host.xml
 
 $JBOSS_HOME/bin/domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0

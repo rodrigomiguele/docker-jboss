@@ -12,7 +12,8 @@ EXPOSE 9999 9990 8080
 
 COPY start-application /usr/local/bin
 
-ENV MASTER_NAME master
+ENV MASTER_HOST_NAME master
+ENV MASTER_USERNAME master
 ENV MASTER_PASSWORD Master@01
 
 CMD ["start-application"]
