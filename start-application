@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sed -i 's@1.2.3.4@'"$MASTER_PORT_9999_TCP_ADDR"'@g' $JBOSS_HOME/domain/configuration/host.xml
+
+$JBOSS_HOME/bin/domain.sh -Djboss.domain.master.address=$MASTER_PORT_9999_TCP_ADDR -b 0.0.0.0 -bmanagement 0.0.0.0 
