@@ -10,7 +10,7 @@ RUN cd $JBOSS_HOME/domain/configuration && \
 	sed -e '/<security-realm name="ManagementRealm">/q' host.xml > host1.xml && \
 	echo -n "<server-identities><secret value=\"" >> host1.xml && \
 	echo -n "MASTER_PASSWORD" >> host1.xml && \
-	echo -n "\" /></server-identities>" >> host1.xml && \
+	echo "\" /></server-identities>" >> host1.xml && \
 	sed -e '1,/<security-realm name="ManagementRealm">/d' host.xml >> host1.xml && \
 	mv host1.xml host.xml
 
