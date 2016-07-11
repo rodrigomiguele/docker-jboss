@@ -11,8 +11,6 @@ batch
 /host=master/server-config=server-two:remove()
 /host=master/server-config=server-three:remove()
 
-/host=master:write-attribute(name=name, value="hostOne")
-/host=master:write-remote-domain-controller(host="1.2.3.4", port=9999, security-realm=ManagementRealm)
-/host=master/server-config=SlaveServer:add(group="main-server-group", auto-start=true)
-
-run-batch
+/host=master:write-attribute(name=name, value="SLAVE_HOST_NAME")
+/host=master:write-remote-domain-controller(host="MASTER_SERVER_NAME", port="MASTER_SERVER_PORT", security-realm=ManagementRealm)
+/host=master/server-config=SLAVE_SERVER_NAME:add(group="SERVER_GROUP", auto-start=true)
