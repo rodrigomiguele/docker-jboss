@@ -12,7 +12,7 @@ batch
 /host=master/server-config=server-three:remove()
 
 /host=master:write-attribute(name=name, value="SLAVE_HOST_NAME")
-/host=master:write-remote-domain-controller(host="MASTER_SERVER_NAME", port=4040, security-realm=ManagementRealm)
+/host=master:write-remote-domain-controller(host="MASTER_SERVER_NAME", port=4040, security-realm=ManagementRealm, username="MASTER_USERNAME")
 /host=master/server-config=SLAVE_SERVER_NAME:add(group="SERVER_GROUP", auto-start=true)
 
 run-batch

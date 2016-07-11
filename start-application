@@ -6,6 +6,7 @@ function changeProperty {
 
 PASSWORD=`echo -n $MASTER_ENV_MASTER_PASSWORD | base64`
 
+changeProperty "MASTER_USERNAME" "$MASTER_ENV_MASTER_USERNAME"
 changeProperty "MASTER_PASSWORD" "$PASSWORD"
 changeProperty "SLAVE_HOST_NAME" "$SLAVE_HOST_NAME"
 changeProperty "4040" "$MASTER_PORT_9999_TCP_PORT"
