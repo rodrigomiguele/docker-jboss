@@ -1,12 +1,5 @@
 batch
 
-/host=master/server-config=server-one:stop()
-/host=master/server-config=server-two:stop()
-
-run-batch
-
-batch
-
 /host=master/server-config=server-one:remove()
 /host=master/server-config=server-two:remove()
 /host=master/server-config=server-three:remove()
