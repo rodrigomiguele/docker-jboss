@@ -14,4 +14,4 @@ changeProperty "MASTER_SERVER_NAME" "$MASTER_PORT_9999_TCP_ADDR"
 changeProperty "SLAVE_SERVER_NAME" "$SLAVE_SERVER_NAME"
 changeProperty "SERVER_GROUP" "$SERVER_GROUP"
 
-$JBOSS_HOME/bin/domain.sh -Djboss.domain.master.address=$MASTER_PORT_9999_TCP_ADDR -b 0.0.0.0 -bmanagement 0.0.0.0 
+$JBOSS_HOME/bin/domain.sh -Djboss.domain.master.address=$MASTER_PORT_9999_TCP_ADDR -b 0.0.0.0 -bmanagement 0.0.0.0 "$@" 
