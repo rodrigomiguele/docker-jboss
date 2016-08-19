@@ -11,7 +11,7 @@ JBOSS_MODE=${2:-"domain"}
 JBOSS_CONFIG=${3:-"$JBOSS_MODE.xml"}
 
 if [ "$JBOSS_MODE" = "domain" ]; then
-    MASTER_HOST=`grep 'host name="MASTER_HOST_NAME"'`
+    MASTER_HOST=`grep 'host name="MASTER_HOST_NAME"' $JBOSS_HOME/domain/configuration/host.xml`
     if [ "x$MASTER_HOST" = "x" ]; then
 	export MASTER=$MASTER_HOST_NAME
     else
