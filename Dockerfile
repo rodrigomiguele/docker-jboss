@@ -1,6 +1,5 @@
 FROM rodrigomiguele/jboss:6.4.0-EAP
 
-ENV JAVA_OPTS "$JAVA_OPTS -Dfile.encoding=UTF-8 -Xms256m -Xmx1g -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=~/heapdump_$DATE_START.hprof -Dorg.jboss.resolver.warning=true"
 ENV SLAVE_HOST_NAME slave
 ENV SLAVE_SERVER_NAME SlaveServer
 ENV SERVER_GROUP main-server-group
